@@ -14,7 +14,7 @@ NodeJs - https://nodejs.org/en/
 
 
 
-## Déploiment live
+## Déploiement live
 
 
 ## Fait avec
@@ -27,7 +27,7 @@ NodeJs - https://nodejs.org/en/
 
 * **Philippe Germain** - *Travail initiale* -
 
-Vois aussi les [contributeurs](https://github.com/Phil365/JamNation/graphs/contributors) qui ont participé au projet.
+Voir aussi les [contributeurs](https://github.com/Phil365/JamNation/graphs/contributors) qui ont participé au projet.
 
 ## License
 
