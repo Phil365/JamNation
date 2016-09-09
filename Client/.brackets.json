@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/wamp/www/JamNations/bower_components/angular-material/modules/closure/core/core.js"
+    ]
+}

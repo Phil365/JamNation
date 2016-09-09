@@ -1,0 +1,27 @@
+<section class="membres">
+    <article ng-repeat="cartemembre in cartemembres" class="flip-container" onclick="">
+        <div class="flipper">
+            <div class="membreInfo">
+                <div class="devantCarte">
+                    <img ng-if="!cartemembre.image_m" ng-src=media/Joueur/anonyme.jpg class="image-liste-membre" />
+                    <img ng-if="cartemembre.image_m" ng-src=media/Joueur/{{cartemembre.image_m}} class="image-liste-membre" />
+                    <img ng-if="cartemembre.image_e" ng-src=media/Contenu/logoEquipe/{{cartemembre.image_e}} class="image-liste-equipe-membre" />
+                </div>
+                <div class='arriereCarte'>
+                    <a class="membreLien" ng-href="#/membre/{{cartemembre.id}}" onclick="">
+                        <div class="fondTexte">
+                            <p class="nom-liste-membre">Nom: {{cartemembre.nom_m}}</p>
+                            <p class="equipe-liste-membre">Equipe: {{cartemembre.nom_e}}</p>
+                            <p class="role-liste-membre" ng-if="cartemembre.role_m">Role: {{cartemembre.role_m}}</p>
+                            <p class="role-liste-membre" ng-if="!cartemembre.role_m"></p>
+                            <canvas id="radar" class="chart chart-radar" chart-data=[[cartemembre.Programation,cartemembre.Design,cartemembre.Son,cartemembre.Arts,cartemembre.Animation]] chart-options="options" chart-labels="labels" chart-colours="colours">
+                            </canvas>
+
+                        </div>
+                        <div class=fondTexteVitre></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

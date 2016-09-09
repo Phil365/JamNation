@@ -1,0 +1,75 @@
+@import 'variables';
+.textestudio {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+    //        text-decoration: underline;
+    //     text-decoration-color:rgba(198, 40, 40, 0.58);
+    border-bottom: 1px ridge rgba(198, 40, 40, 0.58);
+}
+.studio {
+    padding-bottom: 6px;
+    @include display(); //display flex general pour browser
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#studioInfo {
+    border-style: ridge;
+    border-color: rgba(198, 40, 40, 0.08);
+    border-width: 1px;
+    //    background-color: $background-logo;
+    box-shadow: 0 1px 3px 0;
+    tint: (#000000, 44%), 0 1px 1px 0;
+    tint: (#000000, 68%);
+    margin: 10px 10px 0px 10px;
+    color: black;
+    background-color: #2E2D2D;
+    &:hover {
+        box-shadow: 0 15px 33px 0;
+        tint: (#000000, 49%), 0 12px 14px 0;
+        tint: (#000000, 62%);
+        transition: box-shadow 200ms, tint 200ms;
+        text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &:link {
+        text-decoration: none;
+    }
+    max-width: 100px;
+    .image-liste-studio {
+        max-width: 97px;
+        max-height: 97px;
+    }
+    display: inline-table;
+    text-decoration: none;
+}
+twitter-timeline {
+    padding-top: 7px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+}
+.studioInscrit {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    margin-bottom: -8px;
+    overflow: hidden;
+}
+.encadrerTexteAccueil {
+    background: #2E2D2D;
+    margin: 16px;
+    border-style: ridge;
+    border-color: rgba(198, 40, 40, 0.12);
+    border-width: 1px;
+}
+#titrePrincipale {
+    border-bottom: 1px solid;
+    border-bottom-style: ridge;
+    border-bottom-color: rgba(198, 40, 40, 0.58);
+}

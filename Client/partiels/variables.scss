@@ -1,0 +1,28 @@
+$background-image:  url("../media/Contenu/logo_white_top.svg"),-moz-radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+$background-image1:  url("../media/Contenu/logo_white_top.svg"),-webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+$background-image2:  url("../media/Contenu/logo_white_top.svg"),-webkit-gradient(radial,50% 50% ,0 , 50% 50%, 473.34 ,color-stop(0,rgba(53, 52, 52, 1) ),color-stop(0.4648,rgba(41, 40, 40, 1) ),color-stop(1,rgba(21, 20, 21, 1) ));
+$background-image3:  url("../media/Contenu/logo_white_top.svg"),-o-radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+
+
+$background-logo: black;
+$couleur-background: rgba(0,0,0,0);
+
+@mixin background-couleur(){
+    background : -moz-radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+  background : -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+  background : -webkit-gradient(radial,50% 50% ,0 , 50% 50%, 473.34 ,color-stop(0,rgba(53, 52, 52, 1) ),color-stop(0.4648,rgba(41, 40, 40, 1) ),color-stop(1,rgba(21, 20, 21, 1) ));
+  background : -o-radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+  background : -ms-radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2);";
+  background : radial-gradient(50% 50%, circle farthest-corner, rgba(53, 52, 52, 1) 0%, rgba(41, 40, 40, 1) 46.48%, rgba(21, 20, 21, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
+}
+
+
+@mixin display() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}

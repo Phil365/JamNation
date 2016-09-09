@@ -1,0 +1,80 @@
+<div class="md-padding" layout="row" layout-xs="column" layout-align="start none" layout-align-xs="space-around center">
+
+    <div flex-xs flex-gt-xs="50" layout="column">
+        <md-card>
+            <div class='encadrerMembreDetails'>
+                <div layout="row">
+                    <img flex ng-if="!detailsmembre.image_m" ng-src=media/Joueur/anonyme.jpg class="md-card-image" id='imageProfil' alt="Washed Out" />
+                    <img flex ng-if="detailsmembre.image_m" ng-src="media/Joueur/{{detailsmembre.image_m}}" class="md-card-image" id='imageProfil' alt="ImageProfil">
+                    <img ng-if="detailsmembre.image_e" ng-src=media/Contenu/logoEquipe/{{detailsmembre.image_e}} class="image-liste-equipe-membreDetails " />
+                    <md-card-content flex>
+                        <p>
+                           {{detailsmembre.description_m}}
+                        </p>
+                    </md-card-content>
+                </div>
+                <div layout="column">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline" class="nom-liste-membre">{{detailsmembre.prenom_m}} {{detailsmembre.nom_m}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+
+                    <md-card-actions flexlayout-align="start center">
+
+                        <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flocalhost%2Fjamnations%2F%23%2Fmembre%2F2&width=60&layout=button&action=like&show_faces=false&share=true&height=20&appId" width="120" height="26s" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+                    </md-card-actions>
+                </div>
+            </div>
+        </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="50" layout="column">
+        <md-card>
+            <div class='encadrerChartJs'>
+                <md-card-title>
+                    <md-card-title-text layout-align="start center">
+                        <span class="md-headline">Compétences</span>
+                    </md-card-title-text>
+                </md-card-title>
+
+                <md-card-content>
+                    <canvas class="chart chart-radar" chart-data=[[detailsmembre.Programation,detailsmembre.Design,detailsmembre.Son,detailsmembre.Arts,detailsmembre.Animation]] chart-options="options" chart-labels="labels" chart-colours="colours">
+                    </canvas>
+                </md-card-content>
+            </div>
+        </md-card>
+    </div>
+</div>
+
+<md-card class="md-padding">
+    <dtable options="optionsee" rows="dataee" class="material dt">
+    </dtable>
+</md-card>
+  
+   <div layout="column" layout-sm="column" layout-align="center center" layout-align-xs="start center" flex>
+       <md-card >
+            <div class='encadrerTexteAccueil'>
+                <md-card-header>
+                    <md-card-header-text>
+                        <span id='titrePrincipale' class="md-title"  layout= 'row' layout-align='center'>Jeux produits durant le gamejam</span>
+
+                    </md-card-header-text>
+                </md-card-header>
+
+                <md-card-content>
+                    <article ng-repeat="detailsmembreJeu in detailsmembreJeux " class="animate-repeat" >
+        <div   ng-if="detailsmembreJeu.lien_j"><iframe width="550" frameborder="0" height="100%"  ng-src="{{detailsmembreJeu.lien_j  | trustAsResourceUrl}}"  hide-xs ></iframe></div>
+        <div   ng-if="detailsmembreJeu.lien_j"><iframe width="100%" frameborder="0" height="100%"  ng-src="{{detailsmembreJeu.lien_j  | trustAsResourceUrl}}" hide-gt-xs></iframe></div>
+     
+    
+
+
+    </article>
+                <p ng-show="!detailsmembreJeux.length">Aucun jeu disponible</p>
+                </md-card-content>
+            </div>
+        </md-card>
+      
+           
+    </div>

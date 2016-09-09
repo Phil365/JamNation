@@ -1,0 +1,118 @@
+@import 'accueil';
+@import 'footer';
+@import 'header';
+@import 'membre';
+@import 'membre-details';
+@import 'sidenav';
+@import 'gamejam';
+@import 'gamejam-details';
+@import 'equipe-details';
+@import '../bower_components/angular-material/angular-material.scss';
+@import '../bower_components/angular-chart.js/dist/angular-chart';
+@import '../bower_components/angular-loading-bar/build/loading-bar';
+@import '../Css/mediaBouton';
+@import 'variables';
+body {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: $couleur-background;
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+@font-face {
+    font-family: 'Flama Basic';
+    src: url('../media/Font/Flama/Flama%20-%20Basic.otf');
+    font-weight: 100;
+    font-style: normal;
+}
+html {
+    font-family: 'Flama Basic';
+    background-image: $background-image;
+    background-image: $background-image1;
+    background-image: $background-image2;
+    background-image: $background-image3;
+    background-repeat: no-repeat, repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    background-attachment: fixed;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;
+}
+.share {
+    font-size: 30px;
+    line-height: 56px;
+}
+.md-mini i {
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+}
+.md-mini.twt {
+    background: #0084B4;
+}
+#twitterBouton {
+    background: #0084B4;
+}
+.md-mini.fb {
+    background: #47639E;
+}
+#facebookBouton {
+    background: #47639E;
+}
+.md-mini.yt {
+    background: #E62117;
+}
+#courrielBouton {
+    background: #E62117;
+}
+.md-scale {
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    left: auto;
+    position: fixed !important;
+}
+main {
+    overflow-y: auto;
+    min-height: 78%;
+    height: auto !important;
+    height: 78%;
+    //	margin: 0 auto -4em;
+}
+md-input-container.md-default-theme label,
+md-input-container label,
+md-input-container.md-default-theme .md-placeholder,
+md-input-container .md-placeholder {
+    color: #fff;
+}
+md-input-container.md-default-theme .md-input,
+md-input-container .md-input {
+    border-color: #fff;
+}
+md-select.md-default-theme .md-select-value.md-select-placeholder,
+md-select .md-select-value.md-select-placeholder {
+    color: #fff;
+}
+md-select.md-default-theme .md-select-value,
+md-select .md-select-value {
+    border-bottom-color: #fff;
+}
+md-input-container .md-input {
+    width: 99%;
+}
+md-input-container {
+    padding: 2px 8px 2px 8px
+}
+md-content.md-default-theme,
+md-content {
+    color: #fff;
+}
+md-select-menu md-option:focus:not([disabled]):not([selected]) {
+    background: #C62828;
+}
+md-input-container .md-input {
+    color: #fff;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "philippegermain",
+  "version": "1.0.0",
+  "description": "jamnationswebsite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "philippegermain",
+  "license": "ISC",
+  "devDependencies": {
+    "dgeni": "^0.4.2"
+  }
+}

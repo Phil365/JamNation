@@ -1,0 +1,37 @@
+<header>
+    <md-fab-toolbar md-open="demo.isOpen" count="demo.count" md-direction="{{demo.selectedDirection}}">
+        <md-fab-trigger class="align-with-text">
+            <md-button aria-label="menu" class="md-fab md-primary">
+                <md-icon md-svg-src="media\Contenu\ic_view_headline_48px.svg"></md-icon>
+            </md-button>
+        </md-fab-trigger>
+        <md-toolbar>
+            <md-fab-actions class="md-toolbar-tools" nav-bar-aria-label="navigation links">
+                <md-nav-bar id='iconeNav' layout="row" layout-align="center center" flex md-selected-nav-item="currentNavItem" hide-xs show-gt-xs>
+
+                    <md-button aria-label="photo" ng-href="#/accueil" class="md-nav-button">
+                        <md-icon class=LogoNav md-svg-src="media\Contenu\logo_black_horizontal.svg"></md-icon>
+                    </md-button>
+                    <md-button aria-label="photo" ng-href="#/accueil" class="md-nav-button" show-xs hide-gt-xs>
+                        <md-icon class=LogoNav md-svg-src="media\Contenu\logo_black_top.svg"></md-icon>
+                    </md-button>
+                    <span flex></span>
+                    <md-button aria-label="Gamejams" ng-href="#/gamejam" class="md-nav-button">
+                     Gamejams
+                    </md-button>
+                    <md-button aria-label="Équipes" ng-href="#/equipe" class="md-nav-button">
+                        Équipes
+                    </md-button>
+                    <md-button aria-label="Participants" ng-href="#/membre" class="md-nav-button">
+                        Participants
+                    </md-button>
+                    <md-button aria-label="Archives" ng-href="#/archives" class="md-nav-button">
+                       Archives
+                    </md-button>
+
+                </md-nav-bar>
+            </md-fab-actions>
+        </md-toolbar>
+    </md-fab-toolbar>
+
+</header>

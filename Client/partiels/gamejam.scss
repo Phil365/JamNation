@@ -1,0 +1,61 @@
+.partenaireInfo-Principal {
+    margin-left: 16px;
+    border-style: ridge;
+    border-color: rgba(198, 40, 40, 0.08);
+    border-width: 1px;
+    //    background-color: $background-logo;
+    box-shadow: 0 1px 3px 0;
+    tint: (#000000, 44%), 0 1px 1px 0;
+    tint: (#000000, 68%);
+    //    margin: 10px 10px 10px 10px;
+    color: black;
+    background-color: #2E2D2D;
+    &:hover {
+        box-shadow: 0 15px 33px 0;
+        tint: (#000000, 49%), 0 12px 14px 0;
+        tint: (#000000, 62%);
+        transition: box-shadow 200ms, tint 200ms;
+        text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &:link {
+        text-decoration: none;
+    }
+    max-width: 169px;
+    .image-liste-partenaire-Principal {
+        width: 169px;
+    }
+    display: inline-table;
+    text-decoration: none;
+    border-radius: 10%;
+    @media all and (min-width: 600px) {
+        position: absolute;
+        transform: translate(0, -342px);
+        margin-left: 0px;
+    }
+    @media all and (max-width: 600px) {
+        margin-left: 0px;
+    }
+}
+.textesGameJam {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px ridge rgba(198, 40, 40, 0.58);
+}
+a {
+    text-decoration: none;
+}
+md-card {
+    box-shadow: 0 1px 3px 0;
+    tint: (#000000, 44%), 0 1px 1px 0;
+    tint: (#000000, 68%);
+    md-card a:hover {
+        box-shadow: 0 15px 33px 0;
+        tint: (#000000, 49%), 0 12px 14px 0;
+        tint: (#000000, 62%);
+        transition: box-shadow 200ms, tint 200ms;
+    }
+}

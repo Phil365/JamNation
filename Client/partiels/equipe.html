@@ -1,0 +1,25 @@
+<div class='scopeCarte'>
+    <md-card>
+        <div class='encadrerTexteAccueil'>
+            <md-card-header>
+                <md-card-header-text>
+                    <span id='titrePrincipale' class="md-title" layout='row' layout-align='center'>Studios :</span>
+
+                </md-card-header-text>
+            </md-card-header>
+
+            <md-card-content>
+                <section layout-wrap class="studio" layout-gt-sm="row" layout-sm="row" layout-align="center center" layout-align-xs="end center" flex>
+
+                    <article ng-repeat="studio in studios" class="animate-repeat">
+                        <md-button aria-label="photo" ng-href="#/equipe/{{studio.id}}" id="studioInfo" class="md-nav-button">
+                            <img ng-src="media/Contenu/logoEquipe/{{studio.image_e}}" class="image-liste-studio" />
+
+
+                        </md-button>
+                    </article>
+                </section>
+            </md-card-content>
+        </div>
+    </md-card>
+</div>

@@ -1,0 +1,46 @@
+#imageProfil {
+    height: 100%;
+    //    padding: 16px;
+}
+.dt.material {
+    background: #2E2D2D !important;
+}
+md-card .md-actions,
+md-card md-card-actions {
+    margin: 8px 8px 0 16px !important;
+}
+.dt.material .dt-header {
+    border-bottom: 1px solid #C62828 !important;
+    border-style: ridge;
+    border-color: rgba(198, 40, 40, 0.12);
+    border-width: 1px;
+}
+.dt.material .dt-body .dt-row:hover,
+.dt.material .dt-body .dt-row:hover .dt-row-block {
+    background-color: #424242 !important;
+}
+.encadrerMembreDetails {
+    background: #2E2D2D;
+    margin: 16px;
+    border-style: ridge;
+    border-color: rgba(198, 40, 40, 0.12);
+    border-width: 1px;
+}
+.encadrerChartJs {
+    background: #2E2D2D;
+    margin: 16px;
+    border-style: ridge;
+    border-color: rgba(198, 40, 40, 0.12);
+    border-width: 1px;
+}
+.image-liste-equipe-membreDetails {
+    width: 5%;
+    transform: translate(53px, 118px);
+    z-index: 1;
+    webkit-filter: none;
+    filter: none;
+    max-width: 26%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

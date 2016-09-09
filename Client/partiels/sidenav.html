@@ -1,0 +1,32 @@
+<md-button aria-label="menu" ng-click="toggleLeft()" class="md-fab md-primary">
+    <md-icon md-svg-src="media\Contenu\ic_view_headline_48px.svg"></md-icon>
+</md-button>
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
+    <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">JamNations menu</h1>
+    </md-toolbar>
+    <md-content layout="column" layout-align="space-between stretch" layout-padding ng-controller="LeftCtrl">
+        <md-button aria-label="photo" ng-href="#/accueil" class="md-nav-button">
+            <md-icon ng-click="close()" class=LogoNav md-svg-src="media\Contenu\logo_black_horizontal.svg"></md-icon>
+        </md-button>
+        <span flex></span>
+
+        <md-button ng-click="close()" aria-label="Gamejams" ng-href="#/gamejam" class="md-nav-button">
+            Gamejams
+        </md-button>
+        <md-button ng-click="close()" aria-label="Équipes" ng-href="#/equipe" class="md-nav-button">
+            Équipes
+        </md-button>
+        <md-button ng-click="close()" aria-label="Participants" ng-href="#/membre" class="md-nav-button">
+            Participants
+        </md-button>
+        <md-button ng-click="close()" aria-label="Archives" ng-href="#/archives" class="md-nav-button">
+            Archives
+        </md-button>
+
+
+        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+            Fermer
+        </md-button>
+    </md-content>
+</md-sidenav>

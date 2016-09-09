@@ -1,0 +1,151 @@
+<div class="md-padding" layout-gt-sm="row" layout-sm="column" layout-align-gt-sm="start none" layout-align-sm="space-around center">
+
+    <div flex-xs flex-gt-xs="50" layout="column">
+
+        <md-card>
+
+            <div class='encadrerTexteAccueil'>
+                <div hide-gt-xs>
+                    <md-card-header layout="column" layout-align="center center">
+
+
+                        <span layout="column" layout-align="center center" id='titrePrincipale' class="md-title">Équipe: </span>
+
+                        <h1></h1>
+
+                        <a class="partenaireInfo-Principal" ng-href="//{{studiosMembres[0].lien}}">
+                            <img ng-src=media/Contenu/logoEquipe/{{studiosMembres[0].image_e}} class="image-liste-partenaire-Principal" />
+                        </a>
+
+
+
+
+
+
+                    </md-card-header>
+                    <md-card-content>
+
+                        <p layout="row" class='partenaireTexte' layout-align="center center">Partenaire :</p>
+                        <div id='iconeNav' layout="row" layout-xs="column" layout-align="center center" flex>
+                            <article ng-repeat="GamejamSponsor in GamejamSponsors[$index+1]">
+
+                                <p></p>
+                                <a class="partenaireInfo" ng-href="//{{GamejamSponsor.urlpartenaire}}">
+                                    <img ng-src=media/Contenu/logoPartenaire/{{GamejamSponsor.image}} class="image-liste-partenaire" />
+                                </a>
+                            </article>
+                        </div>
+                    </md-card-content>
+                </div>
+                <div hide-xs>
+                    <md-card-header>
+                        <md-card-header-text flex>
+                            <span layout="row" id='titrePrincipale' class="md-title" layout-align="center center">Équipe: </span>
+
+                        </md-card-header-text>
+
+
+                    </md-card-header>
+
+                    <md-card-content>
+
+                        <h1></h1>
+                        <div layout="row" layout-xs="column" layout-align="center center">
+                            <a target="_blank" class="equipeInfo-Principal" ng-href="//{{studiosMembres[0].lien}}">
+                                <img ng-src=media/Contenu/logoEquipe/{{studiosMembres[0].image_e}} class="image-liste-partenaire-Principal" />
+                            </a>
+                        </div>
+
+                        <p layout="row" class='partenaireTexte' layout-align="center center">Partenaire :</p>
+                        <div id='iconeNav' layout="row" layout-xs="column" layout-align="center center" flex>
+                            <article ng-repeat="GamejamSponsor in GamejamSponsors[$index+1]">
+
+                                <p></p>
+                                <a class="partenaireInfo" ng-href="//{{GamejamSponsor.urlpartenaire}}">
+                                    <img ng-src=media/Contenu/logoPartenaire/{{GamejamSponsor.image}} class="image-liste-partenaire" />
+                                </a>
+                            </article>
+                        </div>
+                    </md-card-content>
+                </div>
+            </div>
+        </md-card>
+
+
+
+    </div>
+    <div layout="column" layout-sm="column" layout-align="center center" layout-align-xs="start center" flex>
+        <md-card>
+            <div class='encadrerTexteAccueil'>
+                <md-card-header>
+                    <md-card-header-text>
+                        <span id='titrePrincipale' class="md-title" layout='row' layout-align='center'>Jeux produits durant les gamejams</span>
+
+                    </md-card-header-text>
+                </md-card-header>
+
+                <md-card-content>
+                    <article ng-repeat="JeuEquipe in JeuxEquipe " class="animate-repeat">
+                        <div ng-if="JeuEquipe.lien_j">
+                            <iframe width="550" frameborder="0" height="100%" ng-src="{{JeuEquipe.lien_j  | trustAsResourceUrl}}" hide-xs></iframe>
+                        </div>
+                        <div ng-if="JeuEquipe.lien_j">
+                            <iframe width="100%" frameborder="0" height="100%" ng-src="{{JeuEquipe.lien_j  | trustAsResourceUrl}}" hide-gt-xs></iframe>
+                        </div>
+
+
+
+
+                    </article>
+                </md-card-content>
+            </div>
+        </md-card>
+
+
+    </div>
+
+
+</div>
+<div class='scopeCarte'>
+
+    <md-card>
+        <div class='encadrerTexteAccueil'>
+            <md-card-header>
+                <md-card-header-text>
+                    <span id='titrePrincipale' class="md-title" layout='row' layout-align='center'>Participant :</span>
+
+                </md-card-header-text>
+            </md-card-header>
+
+            <md-card-content>
+                <section class="membres">
+                    <article ng-repeat="studiosMembre in studiosMembres" class="flip-container" onclick="">
+                        <div class="flipper">
+                            <div class="membreInfo">
+                                <div class="devantCarte">
+                                    <img ng-if="!studiosMembre.image_m" ng-src=media/Joueur/anonyme.jpg class="image-liste-membre" />
+                                    <img ng-if="studiosMembre.image_m" ng-src=media/Joueur/{{studiosMembre.image_m}} class="image-liste-membre" />
+                                    <img ng-if="studiosMembre.image_e" ng-src=media/Contenu/logoEquipe/{{studiosMembre.image_e}} class="image-liste-equipe-membre" />
+                                </div>
+                                <div class='arriereCarte'>
+                                    <a class="membreLien" ng-href="#/membre/{{studiosMembre.id}}">
+                                        <div class="fondTexte">
+                                            <p class="nom-liste-membre">Nom: {{studiosMembre.nom_m}}</p>
+                                            <p class="equipe-liste-membre">Equipe: {{studiosMembre.nom_e}}</p>
+                                            <p class="role-liste-membre" ng-if="studiosMembre.role_m">Role: {{studiosMembre.role_m}}</p>
+                                            <p class="role-liste-membre" ng-if="!studiosMembre.role_m"></p>
+                                            <canvas id="radar" class="chart chart-radar" chart-data=[[studiosMembre.Programation,studiosMembre.Design,studiosMembre.Son,studiosMembre.Arts,studiosMembre.Animation]] chart-options="options" chart-labels="labels" chart-colours="colours">
+                                            </canvas>
+
+                                        </div>
+                                        <div class=fondTexteVitre></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </md-card-content>
+        </div>
+    </md-card>
+</div>

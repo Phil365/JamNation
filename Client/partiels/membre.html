@@ -1,0 +1,57 @@
+<div class='encadreBarre'>
+    <md-content id="encadreBarre" class="md-no-momentum">
+        <div class='encadrerRecherche' layout="row" layout-xs="column" layout-align="center center">
+            <md-input-container class="md-icon-float md-block">
+
+                <label for="testInput"><i id='loupe' class="material-icons">search</i>Recherche:</label>
+                <input name='searchText' ng-model="searchText" type="text" md-autofocus>
+
+            </md-input-container>
+            <div layout-xs="row" layout-align-xs="space-between center">
+                <md-input-container>
+                    <md-select name='orderProp' ng-model="orderProp">
+                        <label>Classer par</label>
+                        <md-option value="nom_m">nom</md-option>
+                        <md-option value="-nom_m">nom décroissant</md-option>
+                        <md-option value="nom_e">equipe</md-option>
+                        <md-option value="-nom_e">equipe décroissant</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container>
+                    <md-select name='filtreEquipe' ng-model="filtreEquipe">
+                        <label>Équipe</label>
+                        <md-option ng-value="equipe.nom_e" ng-repeat="equipe in equipes"> {{equipe.nom_e}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <md-button ng-click="clearValue()" ng-disabled="(orderProp || filtreEquipe || searchText )?  false : true">réinitialiser</md-button>
+        </div>
+    </md-content>
+</div>
+<section class="membres">
+    <article ng-repeat="membre in membres | orderBy:orderProp | filter:filtreEquipe | filter:searchText" class="flip-container" >
+        <div class="flipper">
+            <div class="membreInfo">
+                <div class="devantCarte">
+                    <img ng-if="!membre.image_m" ng-src=media/Joueur/anonyme.jpg class="image-liste-membre" />
+                    <img ng-if="membre.image_m" ng-src=media/Joueur/{{membre.image_m}} class="image-liste-membre" />
+                    <img ng-if="membre.image_e" ng-src=media/Contenu/logoEquipe/{{membre.image_e}} class="image-liste-equipe-membre" />
+                </div>
+                <div class='arriereCarte'>
+                    <a class="membreLien" ng-href="#/membre/{{membre.id}}" onclick="">
+                        <div class="fondTexte">
+                            <p class="nom-liste-membre">Nom: {{membre.nom_m}}</p>
+                            <p class="equipe-liste-membre">Equipe: {{membre.nom_e}}</p>
+                            <p class="role-liste-membre" ng-if="membre.role_m">Role: {{membre.role_m}}</p>
+                            <p class="role-liste-membre" ng-if="!membre.role_m"></p>
+                            <canvas id="radar" class="chart chart-radar" chart-data=[[membre.Programation,membre.Design,membre.Son,membre.Arts,membre.Animation]] chart-options="options" chart-labels="labels" chart-colours="colours">
+                            </canvas>
+
+                        </div>
+                        <div class=fondTexteVitre></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

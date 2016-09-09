@@ -1,0 +1,21 @@
+.game_widget_page,
+.game_widget_page .second_page .buy_message,
+.game_widget_page .second_page .left_column,
+.game_widget_page .second_page .buttons_footer,
+.game_widget_page .second_page .after_checkout_footer,
+.game_widget_page .first_page .thumb,
+.game_widget_page .second_page .skip_pay_area,
+.game_widget_page .first_page.has_cover .game_summary {
+    border-color: rgba(198, 40, 40, 0.29);
+}
+.game_widget_page .first_page,
+.game_widget_page .second_page {
+    background-color: #2E2D2D !important;
+}
+.scopeCarte {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    //margin-left: 16px;
+    //margin-right: 16px;
+}

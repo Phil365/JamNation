@@ -1,0 +1,20 @@
+<footer>
+    <md-toolbar class='footerTootlbar' class="md-scroll-shrink">
+        <div id='iconeNav' layout="row" layout-xs="column" layout-align="center center" flex>
+            <p layout-sm="column"       layout-align-sm="start start"  class='partenaireTexte'>Partenaire de la saison</p>
+            <section class="partenaires">
+
+                <article ng-repeat="partenaire in partenaires" class="animate-repeat">
+                    <a target="_blank" class="partenaireInfo" ng-href="//{{partenaire.urlpartenaire}}">
+                        <img ng-src=media/Contenu/logoPartenaire/{{partenaire.image}} class="image-liste-partenaire" />
+                    </a>
+                </article>
+
+            </section>
+            <div class='texteGuilde'>Alimenté par:</div>
+            <a target="_blank" class="guildeInfo" href="//www.laguilde.quebec/fr/">
+                <img ng-src=media/Contenu/logoPartenaire/logoGuilde.png class="image-liste-guilde" />
+            </a>
+        </div>
+    </md-toolbar>
+</footer>

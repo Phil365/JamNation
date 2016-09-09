@@ -1,0 +1,123 @@
+<div class='encadreBarre'>
+    <md-content id="encadreBarre" class="md-no-momentum">
+        <div class='encadrerRecherche' layout="row" layout-xs="column" layout-align="center center">
+            <md-input-container class="md-icon-float md-block">
+
+                <label for="testInput"><i id='loupe' class="material-icons">search</i>Recherche:</label>
+                <input name='searchText' ng-model="searchText" type="text" md-autofocus>
+
+            </md-input-container>
+            <div layout-xs="row" layout-align-xs="space-between center">
+                <md-input-container>
+                    <md-select name='orderProp' ng-model="orderProp">
+                        <label>Classer par</label>
+                        <md-option value="dateGamejam">Date</md-option>
+                        <md-option value="-dateGamejam">Date décroissant</md-option>
+
+                    </md-select>
+                </md-input-container>
+
+            </div>
+            <md-button ng-click="clearValue()" ng-disabled="(orderProp || filtreEquipe || searchText )?  false : true">réinitialiser</md-button>
+        </div>
+    </md-content>
+</div>
+<div class="md-padding" layout-gt-sm="row" layout-sm="column" layout-align-gt-sm="start none" layout-align-sm="space-around center">
+
+
+
+    <article ng-repeat="gamejam in gamejams " class="animate-repeat" flex="90%">
+
+
+        <md-card>
+
+            <div class='encadrerTexteAccueil'>
+                <div hide-gt-xs>
+                    <a ng-href="#/gamejam/{{gamejam.id}}">
+                        <md-card-header>
+                            <div layout="column" layout-align="center center">
+                                <md-card-header-text>
+                                    <span id='titrePrincipale' class="md-title">Game Jam Édition {{gamejam.nom_p}}</span>
+                                    <article ng-repeat="GamejamSponsorPrincipal in GamejamSponsorsPrincipal[$index+1]">
+                                        <h1></h1> </a>
+                    <a target="_blank" class="partenaireInfo-Principal" ng-href="//{{GamejamSponsorPrincipal.urlpartenaire}}">
+                        <img ng-src=media/Contenu/logoPartenaire/{{GamejamSponsorPrincipal.image}} class="image-liste-partenaire-Principal" />
+                    </a>
+                    <a ng-href="#/gamejam/{{gamejam.id}}">
+                        </article>
+                        </md-card-header-text>
+
+                        <div class='textesGameJam' layout="column" layout-align="center center">Le thème: </div>
+                        <div layout="column" layout-align="center center">{{gamejam.theme_g}}</div>
+                        <div class='textesGameJam' layout="column" layout-align="center center">La contrainte: </div>
+                        <div layout="column" layout-align="center center">{{gamejam.contrainte_g}}</div>
+                        <div class='textesGameJam' layout="column" layout-align="center center">La date: </div>
+                        <div layout="column" layout-align="center center">{{gamejam.dateGamejam}}</div>
+                        <div class='textesGameJam' layout="column" layout-align="center center">L'heure: </div>
+                        <div layout="column" layout-align="center center">{{gamejam.heure}} </div>
+                        <div class='textesGameJam' layout="column" layout-align="center center">Description: </div>
+                        <div layout="column" layout-align="center center">{{gamejam.description}}</div>
+                        </div>
+
+                        </md-card-header>
+
+                        <md-card-content>
+
+                            <p layout="row" class='partenaireTexte' layout-align="center center">Partenaire :</p>
+                            <div id='iconeNav' layout="row" layout-xs="column" layout-align="center center" flex>
+                                <article ng-repeat="GamejamSponsor in GamejamSponsors[$index+1]">
+
+                                    <p></p>
+                    </a>
+                    <a target="_blank" class="partenaireInfo" ng-href="//{{GamejamSponsor.urlpartenaire}}">
+                        <img ng-src=media/Contenu/logoPartenaire/{{GamejamSponsor.image}} class="image-liste-partenaire" />
+                    </a>
+                    </article>
+                    </div>
+                    </md-card-content>
+                </div>
+                <div hide-xs>
+                    <a ng-href="#/gamejam/{{gamejam.id}}">
+                        <md-card-header>
+                            <md-card-header-text flex>
+                                <span id='titrePrincipale' class="md-title">Game Jam Édition {{gamejam.nom_p}}</span>
+
+                            </md-card-header-text>
+                            <div layout="column" flex>
+                                <div class='textesGameJam' layout="column" layout-align="center center">Le thème: </div>{{gamejam.theme_g}}
+                                <div class='textesGameJam' layout="column" layout-align="center center">La contrainte: </div>{{gamejam.contrainte_g}}
+                                <div class='textesGameJam' layout="column" layout-align="center center">La date: </div>{{gamejam.dateGamejam}}
+                                <div class='textesGameJam' layout="column" layout-align="center center">L'heure: </div>{{gamejam.heure}}
+                                <div class='textesGameJam' layout="column" layout-align="center center">Description: </div>{{gamejam.description}}
+                            </div>
+
+                        </md-card-header>
+
+                        <md-card-content>
+                            <article ng-repeat="GamejamSponsorPrincipal in GamejamSponsorsPrincipal[$index+1]">
+                                <h1></h1>
+                                <a target="_blank" class="partenaireInfo-Principal" ng-href="//{{GamejamSponsorPrincipal.urlpartenaire}}">
+                                    <img ng-src=media/Contenu/logoPartenaire/{{GamejamSponsorPrincipal.image}} class="image-liste-partenaire-Principal" />
+                                </a>
+                            </article>
+                            <p layout="row" class='partenaireTexte' layout-align="center center">Partenaire :</p>
+                            <div id='iconeNav' layout="row" layout-xs="column" layout-align="center center" flex>
+                                <article ng-repeat="GamejamSponsor in GamejamSponsors[$index+1]">
+
+                                    <p></p>
+                    </a>
+                    <a target="_blank" class="partenaireInfo" ng-href="//{{GamejamSponsor.urlpartenaire}}">
+                        <img ng-src=media/Contenu/logoPartenaire/{{GamejamSponsor.image}} class="image-liste-partenaire" />
+                    </a>
+                    </article>
+                    </div>
+                    </md-card-content>
+                </div>
+            </div>
+        </md-card>
+
+
+
+    </article>
+
+</div>

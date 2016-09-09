@@ -1,0 +1,97 @@
+@import 'variables';
+.partenaires {
+    @include display(); //display flex general pour browser
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.partenaireInfo {
+    border-style: ridge;
+    border-color: rgba(198, 40, 40, 0.08);
+    border-width: 1px;
+    //    background-color: $background-logo;
+    box-shadow: 0 1px 3px 0;
+    tint: (#000000, 44%), 0 1px 1px 0;
+    tint: (#000000, 68%);
+    margin: 10px 10px 10px 10px;
+    color: black;
+    background-color: #2E2D2D;
+    &:hover {
+        box-shadow: 0 15px 33px 0;
+        tint: (#000000, 49%), 0 12px 14px 0;
+        tint: (#000000, 62%);
+        transition: box-shadow 200ms, tint 200ms;
+        text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &:link {
+        text-decoration: none;
+    }
+    max-width: 100px;
+    .image-liste-partenaire {
+        width: 97px;
+    }
+    display: inline-table;
+    text-decoration: none;
+    border-radius: 10%;
+}
+.guildeInfo {
+    //    background-color: $background-logo;
+    //    box-shadow: 0 1px 3px 0;
+    tint: (#000000, 44%), 0 1px 1px 0;
+    tint: (#000000, 68%);
+    margin: 10px 10px 10px 10px;
+    color: black;
+    //    background-color: #2E2D2D;
+    &:hover {
+        box-shadow: 0 15px 33px 0;
+        tint: (#000000, 49%), 0 12px 14px 0;
+        tint: (#000000, 62%);
+        transition: box-shadow 200ms, tint 200ms;
+        text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &:link {
+        text-decoration: none;
+    }
+    max-width: 100px;
+    .image-liste-guilde {
+        width: 97px;
+        background-color: rgba(46, 45, 45, 0);
+        max-width: 100px;
+    }
+    display: inline-table;
+    text-decoration: none;
+    border-radius: 10%;
+}
+footer {
+    //    text-decoration: underline;
+    //    position: absolute;
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+}
+.footerTootlbar {
+    padding: 8px;
+    padding-top: 0px;
+    margin-top: -32px;
+}
+.partenaireTexte {
+    margin-left: 8px;
+    margin-right: 8px;
+    border-bottom: 1px ridge rgba(198, 40, 40, 0.58);
+}
+.texteGuilde {
+    border-bottom: 1px ridge rgba(198, 40, 40, 0.58);
+}
+#iconeNav {
+    margin-top: 8px;
+}
