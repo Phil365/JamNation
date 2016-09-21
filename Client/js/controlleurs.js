@@ -5,7 +5,7 @@
         $ocLazyLoad.load('//platform.twitter.com/widgets.js');
         var req = {
             method: 'GET',
-            url: '../Api/public/membre',
+            url: 'Api/public/membre',
         };
 
         $http(req).then(function (reponse) {
@@ -14,7 +14,7 @@
 
         var reqTextes = {
             method: 'GET',
-            url: '../Api/public/textes',
+            url: 'Api/public/textes',
         };
 
         $http(reqTextes).then(function (reponse) {
@@ -22,7 +22,7 @@
         });
         var reqStudio = {
             method: 'GET',
-            url: '../Api/public/studioInscris',
+            url: 'Api/public/studioInscris',
         };
 
         $http(reqStudio).then(function (reponse) {
@@ -43,13 +43,13 @@
 
         var reqGamejam = {
             method: 'GET',
-            url: '../Api/public/gamejam',
+            url: 'Api/public/gamejam',
         };
 
 
         $scope.GamejamSponsors = [];
         var reqGamejamSponsor = function (i) {
-            $http.get('../Api/public/gamejam/' + [i]).success(function (data) {
+            $http.get('Api/public/gamejam/' + [i]).success(function (data) {
                 $scope.GamejamSponsors[i] = data;
             }).error(function (data) {
                 console.log("The request isn't working");
@@ -57,7 +57,7 @@
         };
         $scope.GamejamSponsorsPrincipal = [];
         var reqGamejamSponsorsPrincipal = function (i) {
-            $http.get('../Api/public/gamejam/' + [i] + '/principal').success(function (data) {
+            $http.get('Api/public/gamejam/' + [i] + '/principal').success(function (data) {
                 $scope.GamejamSponsorsPrincipal[i] = data;
             }).error(function (data) {
                 console.log("The request isn't working");
@@ -86,21 +86,21 @@
         $scope.id = $routeParams.id;
         var reqDetailsGamejamMembres = {
             method: 'GET',
-            url: '../Api/public/gamejam/' + $scope.id + '/info',
+            url: 'Api/public/gamejam/' + $scope.id + '/info',
         };
         $http(reqDetailsGamejamMembres).then(function (reponse) {
             $scope.detailGamejammembres = reponse.data;
         });
         var reqJeuxGamejam = {
             method: 'GET',
-            url: '../Api/public/jeux/' + $scope.id,
+            url: 'Api/public/jeux/' + $scope.id,
         };
         $http(reqJeuxGamejam).then(function (reponse) {
             $scope.JeuxGamejam = reponse.data;
         });
         $scope.GamejamSponsors = [];
         var reqGamejamSponsor = function (i) {
-            $http.get('../Api/public/gamejam/' + $scope.id).success(function (data) {
+            $http.get('Api/public/gamejam/' + $scope.id).success(function (data) {
                 $scope.GamejamSponsors[i] = data;
             }).error(function (data) {
                 console.log("The request isn't working");
@@ -108,7 +108,7 @@
         };
         $scope.GamejamSponsorsPrincipal = [];
         var reqGamejamSponsorsPrincipal = function (i) {
-            $http.get('../Api/public/gamejam/' + $scope.id + '/principal').success(function (data) {
+            $http.get('Api/public/gamejam/' + $scope.id + '/principal').success(function (data) {
                 $scope.GamejamSponsorsPrincipal[i] = data;
             }).error(function (data) {
                 console.log("The request isn't working");
@@ -123,7 +123,7 @@
     jamNationsAdmin.controller('FooterCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
         var reqPartenaire = {
             method: 'GET',
-            url: '../Api/public/partenaire',
+            url: 'Api/public/partenaire',
         };
 
         $http(reqPartenaire).then(function (reponse) {
@@ -197,7 +197,7 @@
     jamNationsAdmin.controller('EquipeCtrl', ['$scope', '$http', '$routeParams', '$sce', function ($scope, $http, $routeParams, $sce) {
         var reqStudio = {
             method: 'GET',
-            url: '../Api/public/studioInscris',
+            url: 'Api/public/studioInscris',
         };
 
         $http(reqStudio).then(function (reponse) {
@@ -209,7 +209,7 @@
         $scope.id = $routeParams.id;
         var reqStudioMembres = {
             method: 'GET',
-            url: '../Api/public/studioInscris/' + $scope.id,
+            url: 'Api/public/studioInscris/' + $scope.id,
         };
 
         $http(reqStudioMembres).then(function (reponse) {
@@ -218,14 +218,14 @@
         $scope.labels = ["Programmation", "Design", "Son", "Arts", "Animation"];
         var reqJeuxEquipe = {
             method: 'GET',
-            url: '../Api/public/equipe/' + $scope.id + '/jeux',
+            url: 'Api/public/equipe/' + $scope.id + '/jeux',
         };
         $http(reqJeuxEquipe).then(function (reponse) {
             $scope.JeuxEquipe = reponse.data;
         });
         $scope.GamejamSponsors = [];
         var reqGamejamSponsor = function (i) {
-            $http.get('../Api/public/equipe/' + $scope.id + '/commandite').success(function (data) {
+            $http.get('Api/public/equipe/' + $scope.id + '/commandite').success(function (data) {
                 $scope.GamejamSponsors[i] = data;
             }).error(function (data) {
                 console.log("The request isn't working");
@@ -242,7 +242,7 @@
     jamNationsAdmin.controller('ArchivesCtrl', ['$scope', '$http', '$routeParams', '$sce', function ($scope, $http, $routeParams, $sce) {
         var reqTextes = {
             method: 'GET',
-            url: '../Api/public/textes/archives',
+            url: 'Api/public/textes/archives',
         };
 
         $http(reqTextes).then(function (reponse) {
@@ -259,11 +259,11 @@
 
         var reqMembre = {
             method: 'GET',
-            url: '../Api/public/font_partie',
+            url: 'Api/public/font_partie',
         };
         var reqEquipe = {
             method: 'GET',
-            url: '../Api/public/equipe',
+            url: 'Api/public/equipe',
         };
 
         $http(reqMembre).then(function (reponse) {
@@ -288,7 +288,7 @@
         $scope.id = $routeParams.id;
         var reqMembreCarte = {
             method: 'GET',
-            url: '../Api/public/font_partie/' + $scope.id,
+            url: 'Api/public/font_partie/' + $scope.id,
         };
 
         $http(reqMembreCarte).then(function (reponse) {
@@ -313,7 +313,7 @@
         $scope.id = $routeParams.id;
         var reqDetailsMembres = {
             method: 'GET',
-            url: '../Api/public/membre/' + $scope.id,
+            url: 'Api/public/membre/' + $scope.id,
         };
         $http(reqDetailsMembres).then(function (reponse) {
             //            console.log(reponse);
@@ -323,7 +323,7 @@
         $scope.id = $routeParams.id;
         var reqDetailsMembresJeux = {
             method: 'GET',
-            url: '../Api/public/membre/' + $scope.id + '/jeux',
+            url: 'Api/public/membre/' + $scope.id + '/jeux',
         };
         $http(reqDetailsMembresJeux).then(function (reponse) {
             $scope.detailsmembreJeux = reponse.data;
@@ -350,7 +350,7 @@
                 }
             ]
         };
-        $http.get('../Api/public/membre/' + $scope.id + '/gamejam').success(function (data) {
+        $http.get('Api/public/membre/' + $scope.id + '/gamejam').success(function (data) {
             $scope.dataee = data;
         });
     }]);
